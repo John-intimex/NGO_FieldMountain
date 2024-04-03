@@ -10,7 +10,7 @@
     <!-- <Footer /> -->
     <ins-footer />
 
-    <!-- <ins-sidebar /> -->
+    <ins-sidebar />
 
     <ins-slide-menu :direction="'right'" v-if="isMobile">
       <ins-menu-layout />

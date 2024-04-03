@@ -5,6 +5,9 @@
     <div class="catContent">
         <template v-if="cmsCategory.PageStyle === '0' || cmsCategory.PageStyle === '1'">
           <div v-html="cmsCategory.Content" class="layer"></div>
+          <div class="calendar" v-if="cmsCategory.Id===40195">
+            <ins-calendar />
+          </div>
         </template>
 
         <ins-cat-layout2 :catData="cmsCatTree" :cmsData="contentList" @changeCatSelect="changeCatSelect" v-if="cmsCategory.PageStyle === '2'" />
@@ -23,7 +26,8 @@ import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
     // InsBanner: () => import('@/components/base/InsBanner.vue'),
     InsCatLayout2: () => import('@/components/business/cms/InsCatLayout2.vue'),
     InsCatLayout3: () => import('@/components/business/cms/InsCatLayout3.vue'),
-    InsCatLayout4: () => import('@/components/business/cms/InsCatLayout4.vue')
+    InsCatLayout4: () => import('@/components/business/cms/InsCatLayout4.vue'),
+    InsCalendar: () => import('@/components/business/home/InsCalendar.vue')
   }
 })
 export default class insNews extends Vue {
@@ -46,7 +50,7 @@ export default class insNews extends Vue {
         this.cmsCategory = result;
         this.PageStyle = result.PageStyle;
         this.cmsTitlie = result.Name;
-
+        console.log(result, 'resultresult');
         switch (result.PageStyle) {
           case '2':
             this.getCategoryTree();
@@ -173,6 +177,10 @@ export default class insNews extends Vue {
 
             .layer {
                 font-size: 16px;
+            }
+            .calendar{
+              margin-top: 50px;
+              text-align: center;
             }
         }
     }

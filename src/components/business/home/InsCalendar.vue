@@ -85,22 +85,23 @@ export default class InsCalendar extends Vue {
 <style lang="less">
 .ins-calendar {
     .is-selected {
-        background-color: #5bcbf5;
-        color: #8ddbf8;
+        background-color: #333;
+        color: #fff;
     }
 
     .el-calendar-table:not(.is-range) td.next, .el-calendar-table:not(.is-range) td.prev {
-        color: #C0C4CC !important;
+        color: #333 !important;
     }
 }
 
 .pc {
     .ins-calendar {
-        background-color: #0061af;
+        background-color: #e8e8e8;
         text-align: center;
         box-sizing: border-box;
         padding-top: 25px;
         width: 570px;
+        margin: 0 auto;
         .el-calendar__header {
             border-bottom: 0;
             position: relative;
@@ -108,7 +109,7 @@ export default class InsCalendar extends Vue {
 
             .el-calendar__title {
                 display: inline-block;
-                color: #dfdc81;
+                color: #333;
                 font-size: 25px;
             }
 
@@ -129,7 +130,7 @@ export default class InsCalendar extends Vue {
 
                         span {
                             font-size: 30px;
-                            color: #fff;
+                            color: #000;
                         }
                     }
                 }
@@ -139,14 +140,14 @@ export default class InsCalendar extends Vue {
         .el-calendar-table {
             thead th {
                 font-size: 20px;
-                color: #fff;
+                color: #000;
             }
 
             tbody {
                 td {
-                    background-color: #5bcbf5;
+                    background-color: #333;
                     font-size: 24px;
-                    color: #8ddbf8;
+                    color: #fff;
 
                     .el-calendar-day {
                         padding: 0;
@@ -187,7 +188,7 @@ export default class InsCalendar extends Vue {
                     }
 
                     &.is-today {
-                        background-color: #2e687a;
+                        background-color: #909399;
                         .calendar-day {
                             color: #fff;
                             background-color: transparent;
@@ -217,7 +218,7 @@ export default class InsCalendar extends Vue {
 
 .mobile {
     .ins-calendar {
-        background-color: #0061af;
+        background-color: #e8e8e8;
         text-align: center;
         box-sizing: border-box;
         padding: 2.5rem 1.8rem;
@@ -229,7 +230,7 @@ export default class InsCalendar extends Vue {
 
             .el-calendar__title {
                 display: inline-block;
-                color: #dfdc81;
+                color: #333;
                 font-size: 2.2rem;
             }
 
@@ -254,7 +255,7 @@ export default class InsCalendar extends Vue {
 
                         span {
                             font-size: 2.8rem;
-                            color: #fff;
+                            color: #000;
                         }
                     }
                 }
@@ -266,14 +267,14 @@ export default class InsCalendar extends Vue {
             .el-calendar-table {
                 thead th {
                     font-size: 1.6rem;
-                    color: #fff;
+                    color: #000;
                 }
 
                 tbody {
                     td {
-                        background-color: #5bcbf5;
+                        background-color: #333;
                         font-size: 1.4rem;
-                        color: #8ddbf8;
+                        color: #fff;
 
                         .el-calendar-day {
                             padding: 0;
@@ -311,7 +312,7 @@ export default class InsCalendar extends Vue {
                         }
 
                         &.is-today {
-                            background-color: #2e687a;
+                            background-color: #909399;
                             .calendar-day {
                                 color: #fff;
                                 background-color: transparent;

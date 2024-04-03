@@ -10,7 +10,7 @@
      <ul class="cmsList">
         <li v-for="(cms,index) in searchcontent" :key="index">
             <router-link :to="'/cms/content/'+cms.Id">
-              <div class="cover" v-if="cms.Cover">
+              <!-- <div class="cover" v-if="cms.Cover">
                   <div class="item-hover">
                  <div class="more">
                   {{$t('Home.ReadMore')}}
@@ -18,7 +18,7 @@
                  <div class="mask"></div>
                  </div>
                  <img :src="cms.Cover" />
-             </div>
+             </div> -->
              <div class="introduce">
                         <p class="data">{{cms.CreateDate}}</p>
                         <p class="titlename">{{cms.Title}}</p>
@@ -127,14 +127,14 @@ export default class insSearch extends Vue {
         }
     }
     .cmsList {
-     margin-left: -10px;
-    margin-right: -10px;
+    //  margin-left: -10px;
+    // margin-right: -10px;
     display: inline-block;
     width: 100%;
         li {
          font-size: 16px;
     margin-bottom: 25px;
-    width: 33.3333333%;
+    width: 25%;
     /* float: left; */
     display: inline-block;
     padding-left: 10px;
@@ -258,6 +258,7 @@ export default class insSearch extends Vue {
    }
 
         .catContent {
+          min-height: 30rem;
             .layer {
                 font-size: 1.2rem;
             }
